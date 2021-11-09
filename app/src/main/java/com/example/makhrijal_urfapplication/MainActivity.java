@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button btn, btn2, btn3;
+    Button btn, btn2, btn3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,14 +23,36 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                openRepoLink();
+                openRepoLink("https://github.com/arsal-4/MC_Assignment_3");
+            }
+        });
+
+        btn2.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                openLearnActivity();
+            }
+        });
+
+        btn3.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                openQuizActivity();
             }
         });
     }
 
-    public void openRepoLink() {
+    private void openRepoLink(String s) {
+    }
+
+    private void openLearnActivity() {
         Intent intent = new Intent(this, LearnActivity.class);
         startActivity(intent);
-
     }
+
+    private void openQuizActivity() {
+        Intent intent = new Intent(this, QuizActivity.class);
+        startActivity(intent);
+    }
+
 }
