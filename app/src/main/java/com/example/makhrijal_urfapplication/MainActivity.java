@@ -3,6 +3,7 @@ package com.example.makhrijal_urfapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -43,6 +44,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void openRepoLink(String s) {
+        Uri uri = Uri.parse(s);
+        Intent intent = new Intent(Intent.ACTION_VIEW,uri);
+        startActivity(intent);
     }
 
     private void openLearnActivity() {
