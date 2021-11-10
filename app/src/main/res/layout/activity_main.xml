@@ -9,10 +9,10 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="183dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="66dp"
-        android:layout_marginBottom="12dp"
+        android:layout_width="185dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="79dp"
+        android:layout_marginBottom="25dp"
         android:text="Muhammad Arslan"
         android:textAlignment="center"
         android:textAllCaps="true"
@@ -24,22 +24,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="308dp"
-        android:layout_height="184dp"
-        android:contentDescription="SS"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/reposs" />
-
     <Button
         android:id="@+id/repoLink"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="29dp"
+        android:layout_marginBottom="25dp"
+        android:backgroundTint="@color/black"
         android:text="Go to Repo"
         app:cornerRadius="25dp"
         app:layout_constraintBottom_toTopOf="@+id/quiz"
@@ -52,7 +42,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="29dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="6dp"
         android:text="Learn"
         app:cornerRadius="25dp"
@@ -64,7 +54,7 @@
         android:id="@+id/quiz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="150dp"
+        android:layout_marginBottom="124dp"
         android:text="Quiz"
         app:cornerRadius="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -76,7 +66,7 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="17dp"
+        android:layout_marginBottom="13dp"
         android:text="MC_Assignment_3 Repo Screenshot"
         android:textColor="#F4F2F2"
         android:textStyle="bold"
@@ -88,7 +78,7 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="55dp"
+        android:layout_marginBottom="54dp"
         android:text="BSEF18A504"
         android:textAlignment="center"
         android:textColor="#F3F2F2"
@@ -98,5 +88,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="308dp"
+        android:layout_height="184dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginEnd="51dp"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toTopOf="@+id/repoLink"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:srcCompat="@drawable/commits" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
