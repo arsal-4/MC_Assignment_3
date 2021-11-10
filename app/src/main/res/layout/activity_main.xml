@@ -28,14 +28,11 @@
         android:id="@+id/imageView"
         android:layout_width="308dp"
         android:layout_height="184dp"
-        android:layout_marginStart="51dp"
-        android:layout_marginBottom="52dp"
         android:contentDescription="SS"
-        app:layout_constraintBottom_toTopOf="@+id/repoLink"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@drawable/reposs" />
 
     <Button
