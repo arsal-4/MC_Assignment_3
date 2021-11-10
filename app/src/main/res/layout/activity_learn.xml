@@ -12,128 +12,128 @@
         android:id="@+id/mk123"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginBottom="33dp"
+        android:layout_marginTop="165dp"
         android:backgroundTint="@color/black"
         android:onClick="makharijButton"
-        android:text="Makharij # 1, 2"
+        android:text="Makharij # 1, 2, 3"
+        android:textColor="#FBF9F9"
         app:cornerRadius="25dp"
-        app:layout_constraintBottom_toBottomOf="@+id/mk"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/mk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="18dp"
+        android:layout_marginStart="9dp"
         android:backgroundTint="@color/black"
         android:onClick="makharijButton"
         android:text="Makharij # 4, 5"
+        android:textColor="#F4F2F2"
         app:cornerRadius="25dp"
-        app:layout_constraintBottom_toTopOf="@+id/mk67"
-        app:layout_constraintStart_toEndOf="@+id/mk67" />
+        app:layout_constraintStart_toStartOf="@+id/mk123"
+        app:layout_constraintTop_toBottomOf="@+id/mk123" />
 
     <Button
         android:id="@+id/mk67"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
-        android:layout_marginBottom="10dp"
         android:backgroundTint="@color/black"
         android:onClick="makharijButton"
         android:text="Makharij # 6, 7"
+        android:textColor="#FAF7F7"
         app:cornerRadius="25dp"
-        app:layout_constraintBottom_toTopOf="@+id/mk8910"
-        app:layout_constraintEnd_toStartOf="@+id/mk8910" />
+        app:layout_constraintStart_toStartOf="@+id/mk"
+        app:layout_constraintTop_toBottomOf="@+id/mk" />
 
     <Button
         android:id="@+id/mk8910"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="323dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="322dp"
         android:backgroundTint="@color/black"
         android:onClick="makharijButton"
         android:text="Makharij # 8, 9, 10"
+        android:textColor="#FFFCFC"
         app:cornerRadius="25dp"
-        app:layout_constraintBottom_toBottomOf="@+id/mk17"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mk67" />
 
     <Button
         android:id="@+id/mk11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="7dp"
-        android:layout_marginEnd="13dp"
+        android:layout_marginStart="18dp"
         android:backgroundTint="@color/black"
         android:onClick="makharijButton"
         android:text="Makharij # 11"
+        android:textColor="#FAF6F6"
         app:cornerRadius="25dp"
-        app:layout_constraintEnd_toStartOf="@+id/mk8910"
+        app:layout_constraintStart_toStartOf="@+id/mk8910"
         app:layout_constraintTop_toBottomOf="@+id/mk8910" />
 
     <Button
         android:id="@+id/mk12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="9dp"
-        android:layout_marginEnd="36dp"
         android:backgroundTint="@color/black"
         android:onClick="makharijButton"
         android:text="Makharij # 12"
+        android:textColor="#FAF8F8"
         app:cornerRadius="25dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/mk11"
         app:layout_constraintTop_toBottomOf="@+id/mk11" />
 
     <Button
         android:id="@+id/mk13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginBottom="8dp"
         android:backgroundTint="@color/black"
         android:onClick="makharijButton"
         android:text="Makharij # 13"
+        android:textColor="#FBF7F7"
         app:cornerRadius="25dp"
-        app:layout_constraintBottom_toTopOf="@+id/mk14"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/mk12"
+        app:layout_constraintTop_toBottomOf="@+id/mk12" />
 
     <Button
         android:id="@+id/mk1516"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="22dp"
         android:backgroundTint="@color/black"
         android:onClick="makharijButton"
         android:text="Makharij # 15, 16"
+        android:textColor="#FBFAFA"
         app:cornerRadius="25dp"
-        app:layout_constraintBottom_toTopOf="@+id/mk17"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mk14" />
 
     <Button
         android:id="@+id/mk14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="36dp"
         android:backgroundTint="@color/black"
         android:onClick="makharijButton"
         android:text="Makharij # 14"
+        android:textColor="#F8F5F5"
         app:cornerRadius="25dp"
-        app:layout_constraintBottom_toTopOf="@+id/mk1516"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/mk13"
+        app:layout_constraintTop_toBottomOf="@+id/mk13" />
 
     <Button
         android:id="@+id/mk17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="36dp"
-        android:layout_marginBottom="38dp"
+        android:layout_marginEnd="16dp"
         android:backgroundTint="@color/black"
         android:onClick="makharijButton"
         android:text="Makharij # 17"
+        android:textColor="#FBF8F8"
         app:cornerRadius="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/mk1516"
+        app:layout_constraintTop_toBottomOf="@+id/mk1516"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

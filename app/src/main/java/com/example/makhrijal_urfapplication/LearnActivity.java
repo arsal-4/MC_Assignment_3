@@ -14,27 +14,11 @@ import java.util.List;
 
 public class LearnActivity extends AppCompatActivity {
 
-    Button btn;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_learn);
 
-        btn = findViewById(R.id.mk123);
-
-        btn.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                openMakharijActivity();
-            }
-        });
-
-    }
-
-    private void openMakharijActivity() {
-        Intent intent = new Intent(this, MakharijActivity.class);
-        startActivity(intent);
     }
 
     public void makharijButton(View view) {
@@ -47,4 +31,5 @@ public class LearnActivity extends AppCompatActivity {
         intent.putExtra("EXTRA_MESSAGE", text);
         startActivity(intent);
     }
+    
 }
