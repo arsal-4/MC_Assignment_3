@@ -31,5 +31,5 @@ public class LearnActivity extends AppCompatActivity {
         intent.putExtra("EXTRA_MESSAGE", text);
         startActivity(intent);
     }
-    
+
 }
