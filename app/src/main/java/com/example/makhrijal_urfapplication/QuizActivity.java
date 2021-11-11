@@ -2,6 +2,7 @@ package com.example.makhrijal_urfapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,7 +15,7 @@ import java.util.List;
 
 public class QuizActivity extends AppCompatActivity {
 
-    int i = 0;
+    int i = 0, count = 0;
     TextView txt, txt2;
     RadioGroup rg;
 
@@ -57,16 +58,23 @@ public class QuizActivity extends AppCompatActivity {
             ((RadioButton) rg.getChildAt(index)).setText(options.get(index));
         }
 
-        if(i >= 4){
-
+        for(int i=0;i<5;i++){
+            if(selAns.get(i).equals(ans.get(i))){
+                count++;
+            }
         }
+
+        Intent i = new Intent(this, ResultActivity.class);
+        i.putExtra("key", Integer.toString(count));
+        startActivity(i);
+
     }
 
     public void onClickRadio(View view){
-        rg = findViewById(R.id.rg);
-        int selectedId = rg.getCheckedRadioButtonId();
+        RadioGroup rad = findViewById(R.id.rg);
+        int selectedId = rad.getCheckedRadioButtonId();
         RadioButton btn = findViewById(selectedId);
-        selAns.add(i,btn.getText().toString());
-
+        selAns.set(i,btn.getText().toString());
     }
+
 }
