@@ -9,76 +9,100 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="184dp"
-        android:layout_height="33dp"
+        android:layout_width="196dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginBottom="13dp"
         android:text="Muhammad Arslan"
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textColor="#F8F3F3"
         android:textSize="18dp"
         android:textStyle="bold|italic"
-        tools:layout_editor_absoluteX="113dp"
-        tools:layout_editor_absoluteY="130dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/repoLink"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
         android:backgroundTint="@color/black"
         android:text="Go to Repo"
         android:textColor="#FAF6F6"
         app:cornerRadius="25dp"
-        tools:layout_editor_absoluteX="143dp"
-        tools:layout_editor_absoluteY="459dp" />
+        app:layout_constraintBottom_toTopOf="@+id/quiz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
         android:id="@+id/learn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="17dp"
         android:text="Learn"
         android:textColor="#FAF6F6"
         app:cornerRadius="25dp"
-        tools:layout_editor_absoluteX="84dp"
-        tools:layout_editor_absoluteY="524dp" />
+        app:layout_constraintEnd_toStartOf="@+id/quiz"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/repoLink" />
 
     <Button
         android:id="@+id/quiz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="159dp"
         android:text="Quiz"
         android:textColor="#FDFCFC"
         app:cornerRadius="25dp"
-        tools:layout_editor_absoluteX="237dp"
-        tools:layout_editor_absoluteY="524dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/learn"
+        app:layout_constraintTop_toBottomOf="@+id/repoLink" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
         android:text="MC_Assignment_3 Repo Screenshot"
         android:textColor="#F4F2F2"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="77dp"
-        tools:layout_editor_absoluteY="225dp" />
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="29dp"
         android:text="BSEF18A504"
         android:textAlignment="center"
         android:textColor="#F3F2F2"
         android:textSize="15dp"
         android:textStyle="bold|italic"
-        tools:layout_editor_absoluteX="164dp"
-        tools:layout_editor_absoluteY="176dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="258dp"
-        android:layout_height="160dp"
-        app:srcCompat="@drawable/commits"
-        tools:layout_editor_absoluteX="77dp"
-        tools:layout_editor_absoluteY="257dp" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginBottom="42dp"
+        app:layout_constraintBottom_toTopOf="@+id/repoLink"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:srcCompat="@drawable/commits" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
