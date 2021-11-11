@@ -29,7 +29,7 @@ public class QuizActivity extends AppCompatActivity {
 
         rg = findViewById(R.id.rg);
 
-        txt.setText(Integer.toString(i+1));
+        txt.setText("Q. No. " + Integer.toString(i+1));
         txt2.setText(que.get(i));
 
         for (int index = 0; index < rg.getChildCount(); index++) {
@@ -39,7 +39,7 @@ public class QuizActivity extends AppCompatActivity {
 
     List<String> que= Arrays.asList("Select the articulation point of the letter ب", "Select the articulation point of the letter د", "Select the articulation point of the letter ع","Select the articulation point of the letter ن", "Select the articulation point of the letter ق");
     List<String> options= Arrays.asList("LIPS","MOUTH", "NOSE","THROAT", "TONGUE");
-    List<String> selAns= Arrays.asList(".",".", ".",",", ",");
+    List<String> selAns= Arrays.asList(".",".", ".",".", ".");
     List<String> ans= Arrays.asList("LIPS", "TONGUE", "TONGUE", "NOSE", "TONGUE");
 
     public void nextButton(View view){
@@ -51,14 +51,14 @@ public class QuizActivity extends AppCompatActivity {
         rg = findViewById(R.id.rg);
         rg.clearCheck();
 
-        txt.setText(Integer.toString(i+1));
+        txt.setText("Q. No. " + Integer.toString(i+1));
         txt2.setText(que.get(i));
 
         for (int index = 0; index < rg.getChildCount(); index++) {
             ((RadioButton) rg.getChildAt(index)).setText(options.get(index));
         }
 
-        for(int i=0;i<5;i++){
+        for(int i = 0; i < 5; i++){
             if(selAns.get(i).equals(ans.get(i))){
                 count++;
             }
@@ -71,8 +71,8 @@ public class QuizActivity extends AppCompatActivity {
     }
 
     public void onClickRadio(View view){
-        RadioGroup rad = findViewById(R.id.rg);
-        int selectedId = rad.getCheckedRadioButtonId();
+        RadioGroup rg = findViewById(R.id.rg);
+        int selectedId = rg.getCheckedRadioButtonId();
         RadioButton btn = findViewById(selectedId);
         selAns.set(i,btn.getText().toString());
     }

@@ -35,12 +35,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//        btn3.setOnClickListener(new View.OnClickListener(){
-//            @Override
-//            public void onClick(View v){
-//                openQuizActivity();
-//            }
-//        });
+        btn3.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                openQuizActivity();
+            }
+        });
     }
 
     private void openRepoLink(String s) {
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void openQuizActivity(View view) {
+    private void openQuizActivity() {
         Intent intent = new Intent(this, QuizActivity.class);
         startActivity(intent);
     }
