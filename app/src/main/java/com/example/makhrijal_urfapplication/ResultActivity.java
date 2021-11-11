@@ -23,8 +23,6 @@ public class ResultActivity extends AppCompatActivity {
         tView = findViewById(R.id.result);
         btn = findViewById(R.id.share);
 
-        PACKAGE_NAME = getApplicationContext().getPackageName();
-
         String txt = getIntent().getExtras().getString("key");
 
         tView.setText("Your Score is " + txt + " out of 5");
@@ -40,7 +38,8 @@ public class ResultActivity extends AppCompatActivity {
     private void share() {
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("text/plain");
-        String value = "https://play.google.com/store/apps/details?id=" + PACKAGE_NAME;
+        String txt = getIntent().getExtras().getString("key");
+        String value = "Your Score is " + txt + " out of 5";
         intent.putExtra(Intent.EXTRA_TEXT, value);
         startActivity(Intent.createChooser(intent, "Share via"));
     }

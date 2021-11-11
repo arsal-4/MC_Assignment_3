@@ -36,16 +36,6 @@ public class QuizActivity extends AppCompatActivity {
             ((RadioButton) rg.getChildAt(index)).setText(options.get(index));
         }
 
-        for(int i = 0; i < 5; i++){
-            if(selAns.get(i).equals(ans.get(i))){
-                count++;
-            }
-        }
-
-        Intent i = new Intent(this, ResultActivity.class);
-        i.putExtra("key", Integer.toString(count));
-        startActivity(i);
-
     }
 
     List<String> que= Arrays.asList("Select the articulation point of the letter ب", "Select the articulation point of the letter د", "Select the articulation point of the letter ع","Select the articulation point of the letter ن", "Select the articulation point of the letter ق");
@@ -75,9 +65,11 @@ public class QuizActivity extends AppCompatActivity {
             }
         }
 
-        Intent i = new Intent(this, ResultActivity.class);
-        i.putExtra("key", Integer.toString(count));
-        startActivity(i);
+        if(i >= 4){
+            Intent intent = new Intent(this, ResultActivity.class);
+            intent.putExtra("key", Integer.toString(count));
+            startActivity(intent);
+        }
 
     }
 
