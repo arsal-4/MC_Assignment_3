@@ -5,43 +5,30 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
 public class ResultActivity extends AppCompatActivity {
 
-    TextView tView;
-    Button btn;
-
-    public static String PACKAGE_NAME;
+    TextView resView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
-        tView = findViewById(R.id.result);
-        btn = findViewById(R.id.share);
+        resView = findViewById(R.id.result);
 
-        String txt = getIntent().getExtras().getString("key");
+        String txt = getIntent().getStringExtra("key");
 
-        tView.setText("Your Score is " + txt + " out of 5");
-
-        btn.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                share();
-            }
-        });
+        resView.setText("Your Score is " + txt + " out of 5");
     }
 
-    private void share() {
+    public void share(View view) {
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("text/plain");
-        String txt = getIntent().getExtras().getString("key");
+        String txt = getIntent().getStringExtra("key");
         String value = "Your Score is " + txt + " out of 5";
         intent.putExtra(Intent.EXTRA_TEXT, value);
         startActivity(Intent.createChooser(intent, "Share via"));
     }
-
 }

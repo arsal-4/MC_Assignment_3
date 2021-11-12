@@ -35,49 +35,45 @@ public class QuizActivity extends AppCompatActivity {
         for (int index = 0; index < rg.getChildCount(); index++) {
             ((RadioButton) rg.getChildAt(index)).setText(options.get(index));
         }
-
     }
 
     List<String> que= Arrays.asList("Select the articulation point of the letter ب", "Select the articulation point of the letter د", "Select the articulation point of the letter ع","Select the articulation point of the letter ن", "Select the articulation point of the letter ق");
     List<String> options= Arrays.asList("LIPS","MOUTH", "NOSE","THROAT", "TONGUE");
-    List<String> selAns= Arrays.asList(".",".", ".",".", ".");
     List<String> ans= Arrays.asList("LIPS", "TONGUE", "TONGUE", "NOSE", "TONGUE");
 
     public void nextButton(View view){
-        i++;
 
         txt = findViewById(R.id.queNo);
         txt2 = findViewById(R.id.queSt);
 
         rg = findViewById(R.id.rg);
-        rg.clearCheck();
+        int selectedId = rg.getCheckedRadioButtonId();
 
-        txt.setText("Q. No. " + Integer.toString(i+1));
-        txt2.setText(que.get(i));
+        if(selectedId != -1){
 
-        for (int index = 0; index < rg.getChildCount(); index++) {
-            ((RadioButton) rg.getChildAt(index)).setText(options.get(index));
-        }
+            RadioButton btn = findViewById(selectedId);
 
-        for(int i = 0; i < 5; i++){
-            if(selAns.get(i).equals(ans.get(i))){
+            if(ans.get(i).equals(btn.getText().toString())){
                 count++;
             }
+
+            i++;
+
+            if(i >= 5){
+                Intent intent = new Intent(this, ResultActivity.class);
+                intent.putExtra("key", String.valueOf(count));
+                startActivity(intent);
+            }
+            else {
+                rg.clearCheck();
+
+                txt.setText("Q. No. " + Integer.toString(i + 1));
+                txt2.setText(que.get(i));
+
+                for (int index = 0; index < rg.getChildCount(); index++) {
+                    ((RadioButton) rg.getChildAt(index)).setText(options.get(index));
+                }
+            }
         }
-
-        if(i >= 4){
-            Intent intent = new Intent(this, ResultActivity.class);
-            intent.putExtra("key", Integer.toString(count));
-            startActivity(intent);
-        }
-
     }
-
-    public void onClickRadio(View view){
-        RadioGroup rg = findViewById(R.id.rg);
-        int selectedId = rg.getCheckedRadioButtonId();
-        RadioButton btn = findViewById(selectedId);
-        selAns.set(i,btn.getText().toString());
-    }
-
 }
