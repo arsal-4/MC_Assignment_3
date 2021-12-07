@@ -2,10 +2,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/action_search"
-        android:title="Search"
-        app:showAsAction="ifRoom"/>
-    <item
-        android:id="@+id/app_bar_search"
         android:icon="@drawable/ic_search_black_24dp"
         android:title="Search"
         app:actionViewClass="android.widget.SearchView"
@@ -13,10 +9,9 @@
     <item
         android:id="@+id/action_quiz"
         android:title="Quiz"
-        android:visible="true"
         app:showAsAction="never" />
     <item
         android:id="@+id/action_learn"
         android:title="Learn"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="never" />
 </menu>

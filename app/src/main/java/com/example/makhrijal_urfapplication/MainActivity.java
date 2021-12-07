@@ -56,17 +56,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_search:
-                Toast.makeText(getApplicationContext(),"Fav", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),"Search", Toast.LENGTH_LONG).show();
+                break;
             case R.id.action_learn:
                 Intent intent_learn = new Intent(this, LearnActivity.class);
                 startActivity(intent_learn);
+                break;
             case R.id.action_quiz:
                 Intent intent_quiz = new Intent(this, QuizActivity.class);
                 startActivity(intent_quiz);
+                break;
             default:
                 // If we got here, the user's action was not recognized.
                 // Invoke the superclass to handle it.
