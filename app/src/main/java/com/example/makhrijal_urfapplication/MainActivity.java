@@ -7,8 +7,11 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -52,6 +55,23 @@ public class MainActivity extends AppCompatActivity {
                 openQuizActivity();
             }
         });
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_search:
+                Toast.makeText(getApplicationContext(),"Fav", Toast.LENGTH_LONG).show();
+            case R.id.action_learn:
+                Intent intent_learn = new Intent(this, LearnActivity.class);
+                startActivity(intent_learn);
+            case R.id.action_quiz:
+                Intent intent_quiz = new Intent(this, QuizActivity.class);
+                startActivity(intent_quiz);
+            default:
+                // If we got here, the user's action was not recognized.
+                // Invoke the superclass to handle it.
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     private void openRepoLink(String s) {
