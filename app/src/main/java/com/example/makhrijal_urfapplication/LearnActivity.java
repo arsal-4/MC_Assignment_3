@@ -1,6 +1,8 @@
 package com.example.makhrijal_urfapplication;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
@@ -14,10 +16,18 @@ import java.util.List;
 
 public class LearnActivity extends AppCompatActivity {
 
+    Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_learn);
+
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        ActionBar ab = getSupportActionBar();
+        ab.setDisplayHomeAsUpEnabled(true);
 
     }
 
@@ -27,7 +37,6 @@ public class LearnActivity extends AppCompatActivity {
         String text = btn.getText().toString();
 
         Intent intent = new Intent(this, MakharijActivity.class);
-
         intent.putExtra("EXTRA_MESSAGE", text);
         startActivity(intent);
     }

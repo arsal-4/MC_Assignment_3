@@ -2,7 +2,7 @@ package com.example.makhrijal_urfapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-
+import androidx.appcompat.app.ActionBar;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -16,19 +16,14 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     Button btn, btn2, btn3;
-    @Override
+    Toolbar toolbar;
 
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it it is present.
-        getMenuInflater().inflate(R.menu.menu, menu);
-        return true;
-    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         btn = findViewById(R.id.repoLink);
@@ -57,6 +52,29 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    private void openRepoLink(String s) {
+        Uri uri = Uri.parse(s);
+        Intent intent = new Intent(Intent.ACTION_VIEW,uri);
+        startActivity(intent);
+    }
+
+    private void openLearnActivity() {
+        Intent intent = new Intent(this, LearnActivity.class);
+        startActivity(intent);
+    }
+
+    private void openQuizActivity() {
+        Intent intent = new Intent(this, QuizActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it it is present.
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -72,26 +90,9 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent_quiz);
                 break;
             default:
-                // If we got here, the user's action was not recognized.
-                // Invoke the superclass to handle it.
-                return super.onOptionsItemSelected(item);
+                //unknown error
         }
-    }
-
-    private void openRepoLink(String s) {
-        Uri uri = Uri.parse(s);
-        Intent intent = new Intent(Intent.ACTION_VIEW,uri);
-        startActivity(intent);
-    }
-
-    private void openLearnActivity() {
-        Intent intent = new Intent(this, LearnActivity.class);
-        startActivity(intent);
-    }
-
-    private void openQuizActivity() {
-        Intent intent = new Intent(this, QuizActivity.class);
-        startActivity(intent);
+        return super.onOptionsItemSelected(item);
     }
 
 }

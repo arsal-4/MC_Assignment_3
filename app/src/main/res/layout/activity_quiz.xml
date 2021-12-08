@@ -7,6 +7,8 @@
     android:background="@drawable/quiz"
     tools:context=".QuizActivity">
 
+    <include layout="@layout/customtoolbar"></include>
+
     <TextView
         android:id="@+id/queNo"
         android:layout_width="156dp"

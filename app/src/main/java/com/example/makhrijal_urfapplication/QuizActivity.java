@@ -1,6 +1,8 @@
 package com.example.makhrijal_urfapplication;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,11 +20,18 @@ public class QuizActivity extends AppCompatActivity {
     int i = 0, count = 0;
     TextView txt, txt2;
     RadioGroup rg;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
+
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        ActionBar ab = getSupportActionBar();
+        ab.setDisplayHomeAsUpEnabled(true);
 
         txt = findViewById(R.id.queNo);
         txt2 = findViewById(R.id.queSt);

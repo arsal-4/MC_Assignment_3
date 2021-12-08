@@ -7,6 +7,8 @@
     android:background="@drawable/learnactivity"
     tools:context=".LearnActivity">
 
+    <include layout="@layout/customtoolbar"></include>
+
     <Button
         android:id="@+id/mk123"
         android:layout_width="wrap_content"
