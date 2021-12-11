@@ -1,0 +1,59 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:title="Search"
+        app:actionViewClass="android.widget.SearchView"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_quiz"
+        android:title="Quiz"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_learn"
+        android:title="Learn"
+        app:showAsAction="never" />
+</menu>
+
+
+
+<androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/tickColor"
+        android:minHeight="?attr/actionBarSize"
+        app:title="Makhārij al-ḥurūf"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="#F8F5F5" />
+
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it it is present.
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        switch (item.getItemId()) {
+//            case R.id.action_search:
+//                Toast.makeText(getApplicationContext(),"Search", Toast.LENGTH_LONG).show();
+//            case R.id.action_learn:
+//                Intent learn = new Intent(this, LearnActivity.class);
+//                startActivity(learn);
+//            case R.id.action_quiz:
+//                Intent quiz = new Intent(this, QuizActivity.class);
+//                startActivity(quiz);
+//            default:
+//                // If we got here, the user's action was not recognized.
+//                // Invoke the superclass to handle it.
+//        }
+//        return super.onOptionsItemSelected(item);
+//    }
